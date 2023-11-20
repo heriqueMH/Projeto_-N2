@@ -53,6 +53,11 @@ public abstract class Usuario {
     return this.senha;
   }
 
+  public static void cadastrarNovoUsuario(Usuario novoUsuario) {
+    usuariosCadastrados.add(novoUsuario);
+    System.out.println("Usuário cadastrado com sucesso.");
+  }
+
   public static Usuario buscarUsuario(String nome, String senha) {
     for (Usuario usuario : usuariosCadastrados) {
         if (usuario.getNome().equalsIgnoreCase(nome) && usuario.getSenha().equals(senha)) {
@@ -76,8 +81,6 @@ public abstract class Usuario {
   public boolean senhaValida(String senha) {
     return this.senha.equals(senha);
   }
-  
-  
 
    public abstract void exibirMenu();
 }

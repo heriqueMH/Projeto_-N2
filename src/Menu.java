@@ -55,10 +55,10 @@ class Menu {
 
     switch (opcaoSubMenu) {
       case 1:
-        Hospede.cadastrarUsuario("Hospede");
+        Hospede.menuDeCadastro();
         break;
       case 2:
-        Proprietario.cadastrarUsuario("Proprietario");
+        Proprietario.menuDeCadastro();
         break;
       default:
         System.out.println("Opção inválida.");
@@ -71,4 +71,5 @@ class Menu {
     String nome = scanner.next();
     Usuario.excluirUsuario(nome);
   }
+
 }
