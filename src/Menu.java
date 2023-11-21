@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Menu {
+public class Menu {
   private Scanner scanner;
 
   public Menu() {
