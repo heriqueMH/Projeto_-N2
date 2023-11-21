@@ -7,7 +7,7 @@ class Menu {
     this.scanner = new Scanner(System.in);
   }
 
-  public void exibirMenu() {
+  public void exibirMenu() throws Exception {
     int opcaoMenu = 0;
     do {
       System.out.println("----- MENU -----");
@@ -46,23 +46,26 @@ class Menu {
   }
 
 
-  private void exibirSubMenuCadastro() {
+  private void exibirSubMenuCadastro() throws Exception{
     System.out.println("");
     System.out.println("----- SUBMENU DE CADASTRO -----");
     System.out.println("1. Cadastrar Hóspede");
     System.out.println("2. Cadastrar Proprietário");
-    System.out.println("3. Sair do programa");
+    System.out.println("3. Voltar para o menu inicial");
     System.out.print("Escolha uma opção: ");
     int opcaoSubMenu = scanner.nextInt();
 
     switch (opcaoSubMenu) {
       case 1:
         Hospede.menuDeCadastro();
+        exibirMenu();
         break;
       case 2:
         Proprietario.menuDeCadastro();
+        exibirMenu();
         break;
       case 3:
+        exibirMenu();
         break;
       default:
         System.out.println("Opção inválida.");

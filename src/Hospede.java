@@ -95,18 +95,19 @@ public class Hospede extends Usuario {
 
   public static void menuDeCadastro() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Digite o nome do proprietário: ");
-    String nome = scanner.next();
-    System.out.print("Digite a senha do proprietário: ");
-    String senha = scanner.next();
-    System.out.print("Digite o CPF do proprietário: ");
-    String cpf = scanner.next();
-    System.out.print("Digite o email do proprietário: ");
-    String email = scanner.next();
-    System.out.print("Digite o endereço do proprietário: ");
-    String endereco = scanner.next();
+    System.out.print("Digite o nome do hospede: ");
+    String nome = scanner.nextLine();
+    System.out.print("Digite a senha do hospede: ");
+    String senha = scanner.nextLine();
+    System.out.print("Digite o CPF do hospede: ");
+    String cpf = scanner.nextLine();
+    System.out.print("Digite o email do hospede: ");
+    String email = scanner.nextLine();
+    System.out.print("Digite o endereço do hospede: ");
+    String endereco = scanner.nextLine();
 
-    cadastrarNovoUsuario(cadastrarHospede(nome, cpf, email, endereco, senha));
+    Hospede hospede = new Hospede(nome, cpf, email, endereco, senha);
+    cadastrarNovoUsuario(hospede);
 
     scanner.close();
   }

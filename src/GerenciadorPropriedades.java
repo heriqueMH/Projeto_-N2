@@ -7,7 +7,6 @@ public class GerenciadorPropriedades {
   private int proximoId;
 
   private GerenciadorPropriedades() {
-    GerenciadorPropriedades.propriedades = new ArrayList<>();
     this.proximoId = 1;
   }
 
@@ -22,6 +21,7 @@ public class GerenciadorPropriedades {
     propriedade.setId(proximoId++);
     propriedade.setProprietario(proprietario);
     propriedades.add(propriedade);
+    System.out.println("Propriedade cadastrada com sucesso!");
   }
 
   public static Propriedade getPropriedadeId(int id) {
