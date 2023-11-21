@@ -49,7 +49,7 @@ public abstract class Usuario {
     this.endereco = endereco;
   }
 
-  private String getSenha() {
+  protected String getSenha() {
     return this.senha;
   }
 
@@ -82,7 +82,7 @@ public abstract class Usuario {
     return this.senha.equals(senha);
   }
 
-   public abstract void exibirMenu();
+  public abstract void exibirMenu();
 }
 
 

@@ -47,9 +47,11 @@ class Menu {
 
 
   private void exibirSubMenuCadastro() {
+    System.out.println("");
     System.out.println("----- SUBMENU DE CADASTRO -----");
     System.out.println("1. Cadastrar Hóspede");
     System.out.println("2. Cadastrar Proprietário");
+    System.out.println("3. Sair do programa");
     System.out.print("Escolha uma opção: ");
     int opcaoSubMenu = scanner.nextInt();
 
@@ -59,6 +61,8 @@ class Menu {
         break;
       case 2:
         Proprietario.menuDeCadastro();
+        break;
+      case 3:
         break;
       default:
         System.out.println("Opção inválida.");
