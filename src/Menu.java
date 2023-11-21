@@ -50,7 +50,6 @@ class Menu {
     scanner.close();
   }
 
-
   private void exibirSubMenuCadastro() throws Exception{
     System.out.println("");
     System.out.println("----- SUBMENU DE CADASTRO -----");
@@ -64,20 +63,18 @@ class Menu {
     switch (opcaoSubMenu) {
       case 1:
         Hospede.menuDeCadastro();
-        exibirMenu();
         break;
       case 2:
         Proprietario.menuDeCadastro();
-        exibirMenu();
         break;
       case 3:
+        System.out.println("");
         exibirMenu();
         break;
       default:
         System.out.println("Opção inválida.");
         break;
     }
-
     scanner.close();
   }
 
