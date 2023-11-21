@@ -42,7 +42,6 @@ public class GerenciadorPropriedades {
       System.out.println("Localização: " + propriedade.getLocalizacao());
       System.out.println("Capacidade: " + propriedade.getCapacidade());
       System.out.println("Preço por Noite: " + propriedade.getPrecoPorNoite());
-      // Exibir outras informações relevantes da propriedade, se houver
       System.out.println("---------------------------------");
     }
   }

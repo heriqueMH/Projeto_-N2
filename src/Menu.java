@@ -17,6 +17,7 @@ class Menu {
       System.out.println("4. Sair do programa");
       System.out.print("Escolha uma opção: ");
       opcaoMenu = scanner.nextInt();
+      scanner.nextLine(); 
       switch (opcaoMenu) {
           case 1:
             autenticarUsuario();
@@ -29,6 +30,8 @@ class Menu {
             break;
       }
     } while (opcaoMenu != 4);
+
+    scanner.close();
   }
 
   private void autenticarUsuario() {
@@ -43,6 +46,8 @@ class Menu {
     } else {
         System.out.println("Usuário ou senha incorretos.");
     }
+
+    scanner.close();
   }
 
 
@@ -54,6 +59,7 @@ class Menu {
     System.out.println("3. Voltar para o menu inicial");
     System.out.print("Escolha uma opção: ");
     int opcaoSubMenu = scanner.nextInt();
+    scanner.nextLine();
 
     switch (opcaoSubMenu) {
       case 1:
@@ -71,12 +77,15 @@ class Menu {
         System.out.println("Opção inválida.");
         break;
     }
+
+    scanner.close();
   }
 
   private void excluirUsuario() {
     System.out.print("Digite o nome do usuário a ser excluído: ");
     String nome = scanner.next();
     Usuario.excluirUsuario(nome);
+    scanner.close();
   }
 
 }

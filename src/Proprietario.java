@@ -34,27 +34,22 @@ public class Proprietario extends Usuario {
     }
   }
 
-public static void menuDeCadastro() throws Exception {
+  public static void menuDeCadastro() throws Exception {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Digite o nome do proprietário: ");
     String nome = scanner.nextLine();
-
     System.out.print("Digite a senha do proprietário: ");
     String senha = scanner.nextLine();
-
     System.out.print("Digite o CPF do proprietário: ");
     String cpf = scanner.nextLine();
-
     System.out.print("Digite o email do proprietário: ");
     String email = scanner.nextLine();
-
     System.out.print("Digite o endereço do proprietário: ");
     String endereco = scanner.nextLine();
 
     Proprietario proprietario = new Proprietario(nome, cpf, email, endereco, senha);
     cadastrarNovoUsuario(proprietario);
 
-    System.out.println("Usuário Cadastrado com sucesso!");
     scanner.close();
   }
 
@@ -74,9 +69,8 @@ public static void menuDeCadastro() throws Exception {
     System.out.println("3. Excluir uma Propriedade");
     System.out.println("4. Sair do programa");
     System.out.print("Escolha uma opção: ");
-
     int opcaoMenu = scanner.nextInt();
-    scanner.nextLine(); // Consumindo a quebra de linha pendente
+    scanner.nextLine();
 
     switch (opcaoMenu) {
       case 1:
@@ -84,23 +78,18 @@ public static void menuDeCadastro() throws Exception {
         break;
       case 2:
         System.out.println("----- CADASTRO DE PROPRIEDADE -----");
-
         System.out.print("Título da propriedade: ");
         String titulo = scanner.nextLine();
-
         System.out.print("Descrição da propriedade: ");
         String descricao = scanner.nextLine();
-
         System.out.print("Localização da propriedade: ");
         String localizacao = scanner.nextLine();
-
         System.out.print("Capacidade da propriedade: ");
         int capacidade = scanner.nextInt();
-        scanner.nextLine(); // Consumindo a quebra de linha pendente
-
+        scanner.nextLine();
         System.out.print("Preço por noite: ");
         double precoPorNoite = scanner.nextDouble();
-        scanner.nextLine(); // Consumindo a quebra de linha pendente
+        scanner.nextLine();
 
         cadastrarNovaPropriedade(this, titulo, descricao, localizacao, capacidade, precoPorNoite);
         break;
@@ -114,7 +103,6 @@ public static void menuDeCadastro() throws Exception {
         System.out.println("Opção inválida.");
         break;
     }
-
       scanner.close();
   }
 }

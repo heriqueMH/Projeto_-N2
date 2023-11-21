@@ -19,6 +19,8 @@ public class Hospede extends Usuario {
     System.out.println("3. Sair do Programa");
     System.out.print("Escolha uma opção: ");
     int opcaoSubMenu = scanner.nextInt();
+    scanner.nextLine();
+    
     switch (opcaoSubMenu) {
         case 1:
             System.out.println("Digite o Id da propriedade.");
@@ -38,6 +40,7 @@ public class Hospede extends Usuario {
             System.out.println("Opção inválida.");
             break;
     }
+    scanner.close();
   }
 
   public void setPropriedade(int id){
@@ -55,7 +58,6 @@ public class Hospede extends Usuario {
             break;
         }
     }
-
     if (reservaParaExcluir != null) {
         reservas.remove(reservaParaExcluir);
         System.out.println("Reserva excluída com sucesso.");
@@ -142,8 +144,9 @@ public class Hospede extends Usuario {
     System.out.println("2. Cadastrar Nova Reserva");
     System.out.println("3. Excluir Reserva");
     System.out.println("4. Sair do programa");
-  
     int opcaoMenu = scanner.nextInt();
+    scanner.nextLine();
+
     switch (opcaoMenu) {
       case 1:
         consultarReservas();
@@ -163,6 +166,7 @@ public class Hospede extends Usuario {
         System.out.println("Opção inválida.");
         break;
       }
+      scanner.close();
   }
 }
 
