@@ -34,7 +34,7 @@ class Menu {
     scanner.close();
   }
 
-  private void autenticarUsuario() {
+  public void autenticarUsuario() {
     System.out.print("Digite o nome do usuário: ");
     String nome = scanner.next();
     System.out.print("Digite a senha do usuário: ");
@@ -50,7 +50,7 @@ class Menu {
     scanner.close();
   }
 
-  private void exibirSubMenuCadastro() throws Exception{
+  public void exibirSubMenuCadastro() throws Exception{
     System.out.println("");
     System.out.println("----- SUBMENU DE CADASTRO -----");
     System.out.println("1. Cadastrar Hóspede");
